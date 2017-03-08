@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ANALYTICS" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.126.87;Initial Catalog=ANALYTICS;Persist Security Info=True;User ID=personify" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ANALYTICSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Engagement_NetPromoterScore" Member="Engagement_NetPromoterScores">
+    <Type Name="Engagement_NetPromoterScore">
+      <Column Name="CustomerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NPSEngagementId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NPSSendDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NPSResultDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NPSScore" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EngagementType" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NPSComments" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MasterCustomerId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ReferenceId" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="AlchemySentimentType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="AlchemySentimentScore" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PromoteDetract" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="SentToSlack" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_Engagement_NetPromoterScore" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PrimaryEmailAddress" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="MasterCustomerId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ParatureCustomerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CustFirstName" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="CustLastName" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="CustCity" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CustState" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CountryCode" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="CustZip" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="WebventProfileCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PersonifyProfileDeactivated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PersonifyProfileCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="WebventPersonId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dupalert" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StreetAddress" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="CustLatitude" Type="System.Decimal" DbType="Decimal(8,5)" CanBeNull="true" />
+      <Column Name="CustLongitude" Type="System.Decimal" DbType="Decimal(8,5)" CanBeNull="true" />
+      <Column Name="ZendeskId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="AllowEmail" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EmailOptOutDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AllowPhone" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="AllowSolicitation" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="NixieAddress" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="Customer_Engagement_NetPromoterScore" Member="Engagement_NetPromoterScores" ThisKey="CustomerId" OtherKey="CustomerId" Type="Engagement_NetPromoterScore" />
+    </Type>
+  </Table>
+</Database>

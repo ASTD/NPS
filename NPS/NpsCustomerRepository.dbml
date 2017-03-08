@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PROD" Class="NpsCustomerRepositoryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.112.207;Initial Catalog=PROD;User ID=personify" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="NpsCustomerRepository" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CUSTOMER" Member="CUSTOMERs">
+    <Type Name="CUSTOMER">
+      <Column Name="MASTER_CUSTOMER_ID" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SUB_CUSTOMER_ID" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ORG_ID" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ORG_UNIT_ID" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="RECORD_TYPE" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SEARCH_NAME" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="LABEL_NAME" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CAN_PLACE_ORDER_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="BILL_PRIMARY_ACCOUNT_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="NAME_PREFIX" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FIRST_NAME" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="MIDDLE_NAME" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="LAST_NAME" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="NAME_SUFFIX" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NAME_CREDENTIALS" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="NICKNAME" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="FORMAL_SALUTATION" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="INFORMAL_SALUTATION" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="CUSTOMER_CLASS_CODE" Type="System.String" DbType="VarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="CUSTOMER_STATUS_CODE" Type="System.String" DbType="VarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="CUSTOMER_STATUS_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ALLOW_FAX_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ALLOW_EMAIL_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ALLOW_PHONE_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ALLOW_LABEL_SALES_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ALLOW_SOLICITATION_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ALLOW_INTERNAL_MAIL_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SOLICITATION_REMOVAL_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TAXABLE_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FEDERAL_TAX_ID" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="VAT_ID" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TAX_EXEMPT_ID" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="SSN" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="GENDER_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="BIRTH_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ETHNICITY_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="ANNUAL_INCOME_RANGE_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="JOB_FUNCTION_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="REVENUE_RANGE_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="STAFF_RANGE_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="FOUNDATION_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="FND_MATCHING_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="FND_MATCHING_PERCENT" Type="System.Decimal" DbType="Decimal(6,3)" CanBeNull="true" />
+      <Column Name="FND_MATCHING_LIMIT" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="LIST_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="ENFORCE_COM_STRUCT_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="NOT_A_DUPLICATE_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MERGED_TO_MAST_CUST" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="MERGED_TO_SUB_CUST" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="EXHIBITOR_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="VIP_COMMITTEE_PRIORITY" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="HOME_PHONE" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="WORK_PHONE" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PRIMARY_PHONE" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PRIMARY_FAX" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PRIMARY_EMAIL_ADDRESS" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PRIMARY_URL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PRIMARY_JOB_TITLE" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="PRIMARY_PHONE_LOCATION_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="PRIMARY_EMAIL_LOCATION_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="PRIMARY_FAX_LOCATION_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="PUBLISH_PRIMARY_FAX_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PUBLISH_PRIMARY_PHONE_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PUBLISH_PRIMARY_EMAIL_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PUBLISH_HOME_PHONE_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PUBLISH_WORK_PHONE_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DEFAULT_LANGUAGE_CODE" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ADDOPER" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ADDDATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MODOPER" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MODDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CONCURRENCY_ID" Type="System.Decimal" DbType="Decimal(12,0) NOT NULL" CanBeNull="false" />
+      <Column Name="IMAGE_ID" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="PREFERRED_COMM_METHOD_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="BILL_PRIMARY_EMPLOYER_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="LAST_FIRST_NAME" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="TRN_COUNTRY_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="TRN_STATE_CODE" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ORIG_CUS_ADDRESS_ID" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="ORIG_CUS_ADDRESS_TYPE_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="WEB_SEGMENT_CREATION_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SEGMENT_RULE_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="SEGMENT_QUALIFIER1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SEGMENT_QUALIFIER2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="INCLUDE_IN_DIRECTORY_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="SEGMENT_DESCR" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CAN_CREATE_SEGMENTS_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="USR_VENDOR_NO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="USR_JOB_TITLE_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="USR_INDUSTRY_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="USR_SIC_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="USR_JOB_FUNCTION_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="USR_COMPANY_SIZE_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="USR_MEMBER_DIRECTORY" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MAILING_PER_YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRIMARY_CONTACT_MAST_CUST_ID" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="PRIMARY_CONTACT_SUB_CUST_ID" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="SHORT_NAME_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="OFFICIAL_COMMITTEE_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="COM_SUBGROUP_MAST_CUST_ID" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="COM_SUBGROUP_SUB_CUST_ID" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="CUS_VOLUNTEER_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ADVERTISER_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ADVERTISING_AGENCY_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="BPA_TITLE_ONLY_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="PROSPECT_ID" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="POTENTIAL_DUPLICATE_REVIEW_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="DUPLICATE_REASON" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="POTENTIAL_MATCH_PROBABILITY" Type="System.Decimal" DbType="Decimal(6,3)" CanBeNull="true" />
+      <Column Name="ORIGINAL_ORG_ID" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ORIGINAL_ORG_UNIT_ID" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ORIGINAL_SOURCE_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="ALLOW_SYSTEM_NOTIFICATION_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SPOUSE_FIRST_NAME" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="MARITAL_STATUS_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="ALLOW_ADVOCACY_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CURRENCY_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="PRIMARY_SEARCH_GROUP" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="USR_CANDIDATE_ID_OVERRIDE" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="USR_ALLOW_MARKETING_EMAIL" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="USR_HEAP_MASTER" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="USR_GRADUATION_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="USR_FACEBOOK_UID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USR_AVATAR" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="USR_FORUM_MEMBER" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="USR_CUSTOMER_INFO_INCOMPLETE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="USR_FREE_MEMBERSHIP_UPGRADE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="FAMILY_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="PRIMARY_SEARCH_GROUP_OVERRIDE_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="NAME_CREDENTIALS_DESC" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="PRIMARY_FAMILY_CONTACT_MAST_CUST_ID" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="PRIMARY_FAMILY_CONTACT_SUB_CUST_ID" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="INCLUDE_IN_WEB_MOBILE_DIRECTORY_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="GUEST_CHECKOUT_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="USR_TRAINING_BUDGET_SIZE_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="USR_DIRECT_REPORT_COUNT_CODE" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="USR_SSO_USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USR_JOB_BANK_CODE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USR_FORUM_MEMBER_SINCE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USR_FORUM_PARTNER_CODE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USR_SELECTED_TERMSCONDITIONS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

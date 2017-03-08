@@ -1,0 +1,195 @@
+﻿@{
+    Layout = null;
+}
+
+
+<style type="text/css">
+    .nps-widget {
+        font-family: sans-serif;
+        background: #fafafa;
+        color: #333;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: solid 1px #dedede;
+    }
+
+        .nps-widget .clear {
+            clear: both;
+        }
+
+        .nps-widget .nps-widget-c {
+            position: relative;
+            width: 100%;
+        }
+
+        .nps-widget .nps-widget-inner {
+            padding: 10px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .nps-widget .nps-widget-rating-inner {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .nps-widget .close img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            height: 12px;
+            width: 12px;
+            cursor: pointer;
+        }
+
+        .nps-widget h2, .nps-widget h3, .nps-widget h4 {
+            text-align: center;
+            color: #333;
+            text-transform: none;
+            margin-bottom: 12px;
+        }
+
+        .nps-widget h2 {
+            font-size: 16px;
+        }
+
+        .nps-widget h3 {
+            font-size: 16px;
+            margin-bottom: 14px;
+            margin-top: 0;
+        }
+
+        .nps-widget h4 {
+            font-size: 14px;
+            margin-top: 0;
+        }
+
+        .nps-widget .ratings {
+            list-style: none;
+            text-align: center;
+        }
+
+            .nps-widget .ratings ul {
+                padding-bottom: 0;
+                margin-bottom: 10px;
+            }
+
+            .nps-widget .ratings li {
+                display: inline-block;
+                border: solid 1px #dedede;
+                padding: 1px;
+                vertical-align: middle;
+                text-align: center;
+                margin: 3px;
+                text-align: center;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                background: #fff;
+            }
+
+                .nps-widget .ratings li span {
+                    display: block;
+                    line-height: 30px;
+                    font-size: 15px;
+                }
+
+                .nps-widget .ratings li:hover {
+                    background: #ff4d00;
+                    border: solid 1px #ff4d00;
+                    color: #fff;
+                }
+
+        .nps-widget .comments {
+            width: 60%;
+            margin: 0 auto;
+            padding: 0px 0px 10px 0;
+            max-width: 560px;
+        }
+
+        .nps-widget .nps-thank-you {
+            text-align: center;
+        }
+
+        .nps-widget .nps-comment {
+            width: 100%;
+            height: 60px;
+            border: solid 1px #dedede;
+            font-family: Arial, sans-serif;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        .nps-widget .nps-submit {
+            background: #ff4d00;
+            border: none;
+            color: white;
+            padding: 9px 20px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 16px;
+            float: right;
+            cursor: pointer;
+        }
+
+        .nps-widget .ratings .explanation {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .nps-widget #nps-rate {
+            border: solid 1px #dedede;
+            background-color: #fff;
+            font-size: 1.17em;
+            color: #ff4d00;
+        }
+</style>
+<div class="nps-widget" data-npsengagementid="@ViewBag.NpsEngagementId" style="display:none;">
+    <div class="nps-widget-c">
+        <div class="close">
+            <img src="https://atd-services.td.org/NPS/Widget/x-mark-1-24.png?v=@(DateTime.Now.ToString("yyyyMMdd"))" alt="" />
+        </div>
+    </div>
+    <div class="nps-widget-inner">
+        <div class="ratings">
+            <h4>Please take a moment to tell us about your experience. We value your feedback!</h4>
+
+            <h2>Based on your recent interaction with ATD, how likely are you to recommend ATD to a friend or colleague?</h2>
+            <div class="nps-widget-rating-inner">
+                <ul id="ratings-selector">
+                    <li data-rate="0"><span>0</span></li>
+                    <li data-rate="1"><span>1</span></li>
+                    <li data-rate="2"><span>2</span></li>
+                    <li data-rate="3"><span>3</span></li>
+                    <li data-rate="4"><span>4</span></li>
+                    <li data-rate="5"><span>5</span></li>
+                    <li data-rate="6"><span>6</span></li>
+                    <li data-rate="7"><span>7</span></li>
+                    <li data-rate="8"><span>8</span></li>
+                    <li data-rate="9"><span>9</span></li>
+                    <li data-rate="10"><span>10</span></li>
+                </ul>
+                <span class="explanation" style="float:left">Not at all likely</span>
+                <span class="explanation" style="float:right">Very likely</span>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+        <div class="comments" style="display:none;">
+            <h3>
+                You gave us a rated us <span id="pre-num">a</span> <select id="nps-rate" name="nps-rate"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>. Can you tell us why?
+            </h3>
+            <textarea class="nps-comment" id="nps-comment" placeholder="Write your comments here..."></textarea>
+            <button type="submit" id="submit-nps-comments" class="nps-submit">Submit</button>
+            <div class="clear"></div>
+        </div>
+        <div class="nps-thank-you" style="display:none;">
+            <img src="https://atd-services.td.org/NPS/Widget/check-mark-8-96.png?v=@(DateTime.Now.ToString("yyyyMMdd"))" alt="" />
+            <h2>Thank you for your feedback!</h2>
+        </div>
+    </div>
+</div>
